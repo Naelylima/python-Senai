@@ -5,7 +5,7 @@ nome = input("Digite seu nome: ")
 
 idade = input("Digite sua idade: ")
 
-if nome == 'natalia':
+if nome == 'NATALIA':
     print("Você é feia")
 else:
     print("Você é bonita ")
