@@ -3,7 +3,7 @@ lista = []
 # tupla = (1, 2, 3)
 # print(tupla)
 
-num = [22, 51, 44, 15]
+num = [22, 51, 44,15]
 primeiro = set(num)
 seg = {1, 32, 15}
 
