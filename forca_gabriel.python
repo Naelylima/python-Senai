@@ -1,0 +1,102 @@
+import random
+from BonecosDaForca import*
+
+
+def game():
+
+    tentativas = 6
+
+    for x, y in enumerate(palavra_sorteada):
+        lista_2.insert(x, "_")
+
+    print(*lista_aux)
+    contador = 1
+    vitoria = 1
+    while tentativas > 0:
+
+        chute_letra = input("\nDigite uma letra! \n")
+
+        if chute_letra.isnumeric():
+            print("Não digite números! ")
+            continue
+
+        for x, y in enumerate(palavra_sorteada):
+            if chute_letra == y and y not in lista_erros and y not in lista_2 and chute_letra.isnumeric():
+                lista_2[x] = y
+                print(*lista_2)
+                vitoria += 1
+
+        if vitoria == len(lista):
+            print(f'Você venceu!')
+
+        if chute_letra not in lista and contador == 1:
+            forca1()
+            contador += 1
+            print(*lista_2)
+            tentativas -= 1
+            lista_erros.append(chute_letra)
+            print("Lista de erros: ", *lista_erros)
+
+        elif chute_letra not in lista and contador == 2:
+            forca2()
+            contador += 1
+            print(*lista_2)
+            tentativas -= 1
+            lista_erros.append(chute_letra)
+            print("Lista de erros: ", *lista_erros)
+
+        elif chute_letra not in lista and contador == 3:
+            forca3()
+            contador += 1
+            print(*lista_2)
+            tentativas -= 1
+            lista_erros.append(chute_letra)
+            print("Lista de erros: ", *lista_erros)
+
+        elif chute_letra not in lista and contador == 4:
+            forca4()
+            contador += 1
+            print(*lista_2)
+            tentativas -= 1
+            lista_erros.append(chute_letra)
+            print("Lista de erros: ", *lista_erros)
+
+        elif chute_letra not in lista and contador == 5:
+            forca5()
+            contador += 1
+            print(*lista_2)
+            tentativas -= 1
+            lista_erros.append(chute_letra)
+            print("Lista de erros: ", *lista_erros)
+
+        elif chute_letra not in lista and contador == 6:
+            forca6()
+            contador += 1
+            print(*lista_2)
+            tentativas -= 1
+            lista_erros.append(chute_letra)
+
+        else:
+            print('Digite um valor válido! ')
+
+
+if __name__ == '__main__':
+
+    palavras = ['desenho', 'telefone', 'alavanca', 'fofoca', 'fragil', 'senhor', 'casal', 'escudo',
+                'cabelo', 'enigma', 'carretel']
+
+    lista = []
+    lista_2 = []
+    lista_aux = []
+    lista_erros = []
+
+    palavra_sorteada = random.choice(palavras)
+
+    for i in palavra_sorteada:
+        lista.append(i)
+
+    print(f'\nSeja bem-vindo ao jogo da forca!')
+
+    forcapadrao()
+
+    game()
