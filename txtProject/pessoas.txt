@@ -1,0 +1,2 @@
+{'nome': 'naely', 'cpf': '12', 'nascimento': '12-10', 'senha': b'$2b$12$I3BX/rrkYGvtEdVtNWoGsujdGwJq.T5ZVFhmXkY01SZCok3MhkVnG'}
+{'nome': 'sasd', 'cpf': 'ada', 'nascimento': 'ad', 'senha': b'$2b$12$0NN040TKVzqbsfuEmu5CT.s2SRxKUTf3106eP4y0x8EcWi5lj7BlW'}
